@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/Style/style.css">
+    <link rel="stylesheet" href="/Style/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.css">
+    <title>Pointer</title>
+</head>
+<body>
+<!-- Navbar -->
+<header>
+    <div class="main-container">
+        <div class="nav">
+            <div class="logo">
+                <a href="/index.html">Ensipedia.</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/About.html">About</a></li>
+                    <li><a href="/Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="burger">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+            </div>
+        </div>
+    </div>   
+</header>
+<!-- End Navbar -->
+
+
+<!-- Hero material -->
+<section id="hero-material">
+    <div class="material-hero main-container">
+        <img src="Hero Pointer.png" alt="Type Data">
+    </div>
+</section>
+<!-- End Hero material -->
+
+
+<!-- Paragraph -->
+<section id="paragraph">
+    <div class="paragraph main-container">
+    <p>Algoritma pointer adalah suatu teknik pemrograman yang memungkinkan kita untuk mengakses dan memanipulasi data secara langsung pada lokasi memori tertentu. Pointer merupakan variabel yang menyimpan alamat memori dari variabel lain. Dengan menggunakan pointer, kita dapat mengakses nilai dari variabel tersebut, serta melakukan operasi aritmatika pada alamat memori. Pointer juga digunakan untuk mengalokasikan memori secara dinamis, yaitu memori yang dialokasikan pada saat program berjalan.</p>
+
+    <p> Berikut adalah contoh program sederhana yang menggunakan pointer dalam bahasa C Mengakses data yang disimpan dalam array :</p>
+
+<pre>
+    <code class="language-c">
+#include <stdio.h>
+
+void main(){
+    int score = 50;
+    int hp = 100;
+
+    // membuat pointer dengan isi alamat memori dari hp
+    int *ptr_hp = &hp;
+
+    // print isi variabel dan alama memori
+    printf("Nama Variabel \t Alamat \t Konten\n");
+    printf("score \t\t %x \t %d \n", &score, score);
+    printf("hp \t\t %x \t %d \n", &hp, hp);
+    printf("ptr_hp \t %x \t %x \n", &ptr_hp, ptr_hp);
+    printf("*ptr_hp \t %x \t %d \n", &ptr_hp, *ptr_hp);
+
+    // mengubah data pada alamat memori dengan pointer
+    *ptr_hp = 95;
+
+    printf("hp \t\t %x \t %d \n", &hp, hp);
+    printf("*ptr_hp \t %x \t %d \n", &ptr_hp, *ptr_hp);
+}   
+    </code>
+</pre>
+
+        <p>Output</p>
+<pre>
+    <code>
+Nama Variabel 	 Alamat 	 Konten
+score 		 37d3a6bc 	 50 
+hp 		 37d3a6b8 	 100 
+ptr_hp 	         37d3a6b0 	 37d3a6b8 
+*ptr_hp 	 37d3a6b0 	 100 
+hp 		 37d3a6b8 	 95 
+*ptr_hp 	 37d3a6b0 	 95 
+        
+    </code>
+</pre>
+    
+
+        <p>
+            Pointer <b>*ptr_hp</b>  berhasil mengubah nilai pada alamat <b>d57ba6c</b> menjadi <b>95</b>.
+        </p>
+        <p>
+            Saat menggunakan pointer, kita menggunakan tanda * di depan nama pointer untuk mengakses nilai pada alamat memori. Jika tidak menggunakan tanda ini, maka kita akan mendapatkan alamat memori yang di-pointing.
+        </p>
+
+
+        <p>Pointer dapat digunakan untuk berbagai tujuan, seperti :</p>
+
+        <ul class="main-container">
+        <li>Mengakses data yang disimpan dalam memori, baik itu variabel, struktur data, atau objek.</li>
+        <li>Memanipulasi data yang disimpan dalam memori.</li>
+        <li>Mentransfer data dari satu variabel ke variabel lain.</li>
+        <li>Menyerahkan data ke fungsi sebagai argumen.</li>
+        </ul>
+
+        <p>Pointer memiliki beberapa kelebihan, yaitu:</p>
+        <ul class="main-container">
+        <li>Efisien dalam mengakses data yang disimpan dalam memori.</li>
+        <li>Memberikan fleksibilitas dalam memanipulasi data.</li>
+        <li>Meningkatkan kinerja program.</li>
+        </ul>
+
+        <p>Namun, pointer juga memiliki beberapa kekurangan, yaitu:</p>
+        <ul class="main-container">
+        <li>Dapat menyebabkan kesalahan program jika tidak digunakan dengan benar.</li>
+        <li>Dapat mempersulit pemrograman jika tidak memahami konsep pointer dengan baik.</li>
+        </ul>
+
+    </div>
+    </section>
+    <!-- End Paragraph -->
+
+
+
+<script src="/Scripts/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</body>
+</html>

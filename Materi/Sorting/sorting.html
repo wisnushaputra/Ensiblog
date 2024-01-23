@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/Style/style.css">
+    <link rel="stylesheet" href="/Style/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.css">
+    <title>Sorting</title>
+</head>
+<body>
+<!-- Navbar -->
+<header>
+    <div class="main-container">
+        <div class="nav">
+            <div class="logo">
+                <a href="/index.html">Ensipedia.</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/About.html">About</a></li>
+                    <li><a href="/Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="burger">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+            </div>
+        </div>
+    </div>   
+</header>
+<!-- End Navbar -->
+
+
+<!-- Hero material -->
+<section id="hero-material">
+    <div class="material-hero main-container">
+        <img src="Hero Sorting.jpg" alt="Type Data">
+    </div>
+</section>
+<!-- End Hero material -->
+
+
+<!-- Paragraph -->
+<section id="paragraph">
+    <div class="paragraph main-container">
+        <p>Struktur data sorting adalah proses menyusun kembali data yang sebelumnya telah disusun dengan suatu pola tertentu, sehingga tersusun secara teratur menurut aturan tertentu. Pengurutan data dapat dilakukan secara ascending (urut naik) dan descending (urut turun).</p>
+
+        <p>Contoh:</p>
+        <ul class="main-container">
+        <li>Data Acak: 5 6 8 1 3 25 10</li>
+        <li>Ascending: 1 3 5 6 8 10 25</li>
+        <li>Descending: 25 10 8 6 5 3 1</li>
+        </ul>
+
+
+        <p>Secara umum, metode pengurutan data dapat dibagi menjadi empat kategori, yaitu:</p>
+        <ul class="main-container">
+        <li>Pengurutan berdasarkan perbandingan (comparison-based sorting)
+        <p>Metode ini menggunakan perbandingan untuk menentukan urutan data, Beberapa algoritma pengurutan berdasarkan perbandingan adalah:</p>
+        
+        <ul class="main-container">
+        <li>Bubble sort.</li>
+        <li>Selection sort.</li>
+        <li>Insertion sort.</li>
+        <li>Shell sort.</li>
+        <li>Quick sort.</li>
+        <li>Merge sort.</li>
+        </ul></li>
+
+        <li>Pengurutan berdasarkan prioritas (priority queue sorting method)
+        <p>Metode ini menggunakan struktur data priority queue untuk menyimpan data, Beberapa algoritma pengurutan berdasarkan prioritas adalah:</p>
+
+        <ul class="main-container">
+        <li>Heap sort.</li>
+        </ul></li>
+
+        <li>Pengurutan berdasarkan penyisipan dan penjagaan terurut (insert and keep sorted method)
+        <p>Metode ini bekerja dengan cara memasukkan data baru ke dalam array yang sudah terurut, Beberapa algoritma pengurutan berdasarkan penyisipan dan penjagaan terurut adalah:</p>
+        
+        <ul class="main-container">
+        <li>Insertion sort.</li>
+        <li>Tree sort.</li>
+        </ul></li>
+
+        <li>Pengurutan berdasarkan pembagian dan penguasaan (devide and conquer method)
+        <p>Metode ini membagi data menjadi dua bagian, kemudian masing-masing bagian diurutkan secara rekursif, Beberapa algoritma pengurutan berdasarkan pembagian dan penguasaan adalah:</p>
+
+        <ul class="main-container">
+        <li>Quick sort.</li>
+        <li>Merge sort.</li>
+        </ul></li>
+        </ul>
+
+        <P>Contoh implementasi buble sort pada bahasa C :</P>
+
+
+<pre>
+    <code class="language-c">
+#include <stdio.h>
+
+void bubble_sort(int *arr, int n) {
+    for (int i = 0; i < n - 1; i++) {
+    for (int j = 0; j < n - i - 1; j++) {
+        if (arr[j] > arr[j + 1]) {
+        int temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+        }
+    }
+    }
+}
+
+int main() {
+    int arr[] = {5, 6, 8, 1, 3, 25, 10};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    printf("Data sebelum diurutkan: \n");
+    for (int i = 0; i < n; i++) {
+    printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    bubble_sort(arr, n);
+
+    printf("Data setelah diurutkan: \n");
+    for (int i = 0; i < n; i++) {
+    printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+    </code>
+</pre>
+
+
+    <p>Penjelasan:</p>
+
+    <p>Algoritma bubble sort bekerja dengan cara membandingkan dua elemen data yang berurutan. Jika elemen pertama lebih besar dari elemen kedua, maka kedua elemen tersebut ditukar posisinya.
+    Proses ini dilakukan secara berulang-ulang hingga tidak ada lagi elemen yang perlu ditukar posisinya.</p>
+    <p>Output:</p>
+
+    <p>Data sebelum diurutkan:</p>
+    <ul class="main-container">
+    <li>5 6 8 1 3 25 10</li>
+    </ul>
+
+    <p>Data setelah diurutkan:</p>
+    <ul class="main-container">
+    <li>1 3 5 6 8 10 25</li>
+    </ul>
+    </div>
+    </section>
+    <!-- End Paragraph -->
+
+
+
+<script src="/Scripts/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</body>
+</html>

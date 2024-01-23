@@ -32,6 +32,7 @@
 body {
     font-family: "Poppins", sans-serif ;
     background-color: var(--primaryBackgrounColor);
+    font-size: 1rem;
 }
 
 
@@ -41,7 +42,7 @@ h1,h2,h3,h4,h5,h6, strong {
 
 p {
     font-size: 1rem;
-    line-height: 1.9rem;
+    line-height: 2rem;
 }
 
 p, span, label, input, textarea, li {
@@ -425,4 +426,16 @@ footer {
 .Social-media a {
     padding: 1rem 1rem;
     gap: 1rem;
+}
+
+
+
+li {
+    font-size: 1.3rem;
+    line-height: 3.5rem;
+}
+
+.paragraph p {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }

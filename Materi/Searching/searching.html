@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/Style/style.css">
+    <link rel="stylesheet" href="/Style/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.css">
+    <title>Searching</title>
+</head>
+<body>
+<!-- Navbar -->
+<header>
+    <div class="main-container">
+        <div class="nav">
+            <div class="logo">
+                <a href="/index.html">Ensipedia.</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/About.html">About</a></li>
+                    <li><a href="/Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="burger">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+            </div>
+        </div>
+    </div>   
+</header>
+<!-- End Navbar -->
+
+
+<!-- Hero material -->
+<section id="hero-material">
+    <div class="material-hero main-container">
+        <img src="Hero Searching.png" alt="Type Data">
+    </div>
+</section>
+<!-- End Hero material -->
+
+
+<!-- Paragraph -->
+<section id="paragraph">
+    <div class="paragraph main-container">
+        <P>Algoritma searching adalah suatu metode yang digunakan untuk mencari data tertentu dalam sebuah struktur data seperti array, list, atau tree. Tujuannya adalah untuk menemukan posisi atau keberadaan data yang dicari dalam struktur data dengan cara yang efisien dan efektif. Algoritma searching digunakan pada berbagai jenis aplikasi, seperti mesin pencari, permainan, dan aplikasi bisnis.</P> 
+        <p>Ada beberapa jenis algoritma searching yang umum digunakan di antaranya:</p>
+        <ol class="main-container">
+        <li>Linear Search :</li>
+         <p>Algoritma ini sangat sederhana dan mudah dipahami. Algoritma linear search bekerja dengan cara membandingkan setiap elemen pada list atau array secara berurutan hingga data yang dicari ditemukan atau seluruh elemen sudah dibandingkan. Algoritma ini cocok digunakan untuk data yang jumlahnya tidak terlalu besar. Namun, jika data yang dicari berada di posisi akhir atau tidak terdapat dalam list atau array, algoritma ini akan membutuhkan waktu yang lama untuk menyelesaikan pencarian.</p>
+            <p>Contoh penggunaan linerar search dalam bahasa C :</p>
+
+
+<pre>
+    <code class="language-c">
+#include <stdio.h> 
+  
+int search(int arr[], int N, int x) 
+{ 
+    for (int i = 0; i < N; i++) 
+        if (arr[i] == x) 
+            return i; 
+    return -1; 
+} 
+  
+// Driver code 
+int main(void) 
+{ 
+    int arr[] = { 2, 3, 4, 10, 40 }; 
+    int x = 10; 
+    int N = sizeof(arr) / sizeof(arr[0]); 
+  
+    // Function call 
+    int result = search(arr, N, x); 
+    (result == -1) 
+        ? printf("Element is not present in array") 
+        : printf("Element is present at index %d", result); 
+    return 0; 
+}
+    </code>
+</pre>
+
+
+        <li> Binary Search :</li>
+         <p>Algoritma binary search digunakan untuk mencari data pada list atau array yang sudah terurut. Algoritma ini bekerja dengan membandingkan nilai data yang dicari dengan nilai tengah list atau array. Jika nilai data yang dicari lebih besar dari nilai tengah, maka algoritma akan mencari pada setengah kanan list atau array, dan begitu juga sebaliknya. Binary search memiliki kompleksitas waktu yang lebih baik dibandingkan dengan linear search, namun hanya dapat digunakan pada data yang sudah terurut.</p>
+            <p>Contoh penggunaan binary search dalam bahasa C :</p>
+
+<pre>
+    <code> 
+#include <stdio.h>
+
+int binarySearch(int arr[], int l, int r, int x)
+{
+    while (l <= r) {
+        int m = l + (r - l) / 2;
+        if (arr[m] == x)
+            return m;
+        if (arr[m] < x)
+            l = m + 1;
+        else
+            r = m - 1;
+    }
+    return -1;
+}
+// Driver code
+int main(void)
+{
+    int arr[] = { 2, 3, 4, 10, 40 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int x = 10;
+    int result = binarySearch(arr, 0, n - 1, x);
+    (result == -1) ? printf("Element is not present"
+                            " in array")
+                    : printf("Element is present at "
+                            "index %d",
+                            result);
+    return 0;
+}
+            
+    </code>
+</pre>
+
+        <li>Interpolation Search :</li>
+         <p>Algoritma interpolation search digunakan untuk mencari data pada list atau array yang sudah terurut. Algoritma ini bekerja dengan memperkirakan posisi data yang dicari berdasarkan nilai data pada posisi awal dan akhir list atau array. Algoritma ini lebih cepat daripada binary search jika data yang dicari terdapat pada posisi awal atau akhir list atau array.</p>
+
+        <li>Hash Search :</li>
+         <p>Algoritma hash search digunakan untuk mencari data pada tabel hash. Algoritma ini bekerja dengan menghitung nilai hash dari data yang dicari dan mencari data tersebut pada tabel hash. Algoritma ini memiliki kompleksitas waktu yang konstan dan sangat cepat, namun membutuhkan memori yang lebih besar.</p>
+
+        <li>Exponential Search :</li>
+         <p>Algoritma exponential search digunakan untuk mencari data pada list atau array yang sudah terurut. Algoritma ini bekerja dengan memperkirakan posisi data yang dicari dengan cara menggandakan jarak antara posisi awal dan akhir list atau array. Algoritma ini lebih cepat daripada binary search jika data yang dicari terdapat pada posisi awal list atau array.</p>
+
+        <li>Jump Search :</li>
+         <p>Algoritma jump search digunakan untuk mencari data pada list atau array yang sudah terurut. Algoritma ini bekerja dengan memperkirakan posisi data yang dicari dengan cara melompati beberapa elemen pada list atau array. Algoritma ini lebih cepat daripada linear search, namun lebih lambat daripada binary search.</p>
+
+        <li>Fibonacci Search :</li>
+         <p>Algoritma fibonacci search digunakan untuk mencari data pada list atau array yang sudah terurut. Algoritma ini bekerja dengan memperkirakan posisi data yang dicari dengan cara menggunakan deret fibonacci. Algoritma ini lebih cepat daripada linear search, namun lebih lambat daripada binary search.</p>
+
+        <li>Ternary Search :</li>
+         <p>Algoritma ternary search digunakan untuk mencari data pada list atau array yang sudah terurut. Algoritma ini bekerja dengan membagi list atau array menjadi tiga bagian dan memeriksa apakah data yang dicari berada pada bagian kiri, tengah, atau kanan. Algoritma ini lebih cepat daripada linear search, namun lebih lambat daripada binary search.</p>
+        </ol>
+        <p>Karakteristik algoritma searching meliputi efisiensi, akurasi, keamanan, modularitas, scalability, keterbacaan, dan kesederhanaan.</p>
+
+        
+    </div>
+    </section>
+    <!-- End Paragraph -->
+
+
+
+<script src="/Scripts/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</body>
+</html>
